@@ -34,6 +34,7 @@
   
 
   <meta name="baidu-site-verification" content="6M2XifqIii" />
+<link rel="alternate" href="/atom.xml" title="学习随笔" type="application/atom+xml">
 </head>
 
 </html>
@@ -75,7 +76,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">291</span>
+            <span class="post-count">1.4k</span>
         </span>
     </span>
 
@@ -84,7 +85,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1 分钟</span>
+            <span class="post-count">5 分钟</span>
         </span>
     </span>
 </div>
@@ -100,25 +101,74 @@
     <div class="article-entry" itemprop="articleBody">
        
   <p>本篇博客是 Windows10 平台下基于 hexo 搭建静态博客的攻略以及经验分享，有一些我自己踩过的坑及解决办法。</p>
-<p>在此特别感谢 B站up<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>所提供的参考帮助！</p>
+<p>在此特别感谢 B站up <a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a> 所提供的参考帮助！</p>
 <p>仅以此篇开始我的个人博客之旅，同时也希望能够对初用 hexo 的大家有所帮助。</p>
-<h2 id="软件的安装与准备"><a href="#软件的安装与准备" class="headerlink" title="软件的安装与准备"></a>软件的安装与准备</h2><p>#1、Git 的安装</p>
-<p>Git是用来管理代码的，在 Windows 下用 cmd 貌似也可以实现，但比较麻烦，所以推荐下载此软件。</p>
+<h2 id="软件的安装与准备"><a href="#软件的安装与准备" class="headerlink" title="软件的安装与准备"></a>软件的安装与准备</h2><h1 id="1、Git-的安装"><a href="#1、Git-的安装" class="headerlink" title="1、Git 的安装"></a>1、Git 的安装</h1><p>Git是用来管理代码的，在 Windows 下用 cmd 貌似也可以实现，但比较麻烦，所以推荐下载此软件。</p>
 <p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a></p>
-<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/gitdownload.png" class title="Git官网"></div>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/gitdownload.png" class="" title="Git官网"></div>
 
 <p>缺省安装即可（即一路 next）。<br>安装成功后，随意在一个文件夹中右键，会出现 Git Bash Here</p>
-<div style="width:50%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/git%E6%88%90%E5%8A%9F.png" class title="git安装成功"></div>
+<div style="width:50%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/git%E6%88%90%E5%8A%9F.png" class="" title="git安装成功"></div>
 
-<p>#2、Node.js 的安装</p>
-<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。使用 hexo 需要安装此环境。</p>
+<h1 id="2、Node-js-的安装"><a href="#2、Node-js-的安装" class="headerlink" title="2、Node.js 的安装"></a>2、Node.js 的安装</h1><p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。使用 hexo 需要安装此环境。</p>
 <p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Nodejs官网</a></p>
-<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/nodejs%E4%B8%8B%E8%BD%BD.png" class title="nodejs下载"></div>
-
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/nodejs%E4%B8%8B%E8%BD%BD.png" class="" title="nodejs下载"></div>
 
 <p>选择左边的 LTS 版本，该版本更稳定。缺省安装即可。</p>
-<h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><p>1、在随意一个位置新建一个文件夹，比如我在 E盘 中建立一个名为 Blog1 的文件夹。</p>
-<p>2、双击进入这个空白文件夹，在空白处右键鼠标，选择 <label style="color:red">Git Bash Here</label> </p>
+<h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><p>1、在随意一个文件夹的空白处右键鼠标，选择 <label style="color:red">Git Bash Here</label> </p>
+<p>2、输入 <code>node -v</code> 查看 Node.js 是否正确安装。例如，我此处显示 <code>v12.18.2</code> 。 </p>
+<div style="width:100%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/nodev.png" class="" title="查看node版本"></div>
+
+<p>3、更改 npm 的默认源。npm 是 Node.js 内置的可用于下载资源的软件包管理工具，它默认的源在国外，所以国内用户下载速度可能会有点慢。<br>   所以此处我们给 npm 换一个源（此处我们是换成淘宝的）：<br>   输入 <code>npm install -g cnpm --registry=http://registry.npm.taobao.org</code> </p>
+<div style="width:100%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/cnpm.png" class="" title="换源"></div>
+
+<p>   因为我已经安装过了，所以我这执行这些命令它是更新，会和大家第一次安装显示的内容有所不同。<br>   安装完成后，输入 <code>cnpm -v</code> 可查看 cnpm 版本。</p>
+<div style="width:100%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/cnpmv.png" class="" title="查看cnpm版本"></div> 
+
+<p>   出现这样的内容，则说明 cnpm 安装成功。</p>
+<p>4、输入 <code>cnpm install -g hexo-cli</code> 安装 hexo 框架</p>
+<p>5、输入 <code>hexo -v</code> 查看 hexo 版本，验证 hexo 是否安装成功。</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/hexov.png" class="" title="查看hexo版本"></div>
+
+<h2 id="新建-Hexo-博客项目"><a href="#新建-Hexo-博客项目" class="headerlink" title="新建 Hexo 博客项目"></a>新建 Hexo 博客项目</h2><p>1、新建一个文件夹，用于部署新建的博客项目。例如我在 E 盘中新建了一个名为 Blog1 的空文件夹。</p>
+<p>2、双击进入此新建的文件夹，右键鼠标，选择  <label style="color:red">Git Bash Here</label><br>   *注：与此项目有关的 git 终端都需要在这个目录下输入相关命令。可以选择打开次文件夹，然后右键选择 Git Bash Here；或者在 git 终端中使用 <code>cd 你的文件夹地址</code> 命令切换到该部署项目的目录。</p>
+<p>3、键入命令 <code>hexo init</code> 部署项目</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/hexoinit.png" class="" title="部署新项目"></div>
+
+<p>   此时新建的文件夹中会出现部署产生的文件。Hexo 博客项目就新建好了。</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/hexonew.png" class="" title="新文件"></div>
+
+<h2 id="运行测试"><a href="#运行测试" class="headerlink" title="运行测试"></a>运行测试</h2><p>1、在 git 终端键入命令 <code>hexo s</code> 启动本地博客，用于预览博客，以后写的博客内容可以先本地预览后再上载。 </p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/hexos.png" class="" title="预览博客"></div>
+
+<p>   打开浏览器，输入 <code>localhost:4000</code> ，看到下图则说明本地博客搭建完成。</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/4000.png" class="" title="博客"></div>
+
+<p>2、hexo 常用命令：</p>
+<figure class="highlight plain"><figcaption><span>c #用于清理缓存文件</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">   hexo g #用于生成文件</span><br><span class="line">   hexo s #用于运行本地服务器，进行预览</span><br><span class="line">   hexo d #上载到服务器中&#96;&#96;&#96; </span><br><span class="line">   </span><br><span class="line">## 上载到 github、gitee(码云) 服务器</span><br><span class="line"></span><br><span class="line"># 上载到 github</span><br><span class="line"></span><br><span class="line">此处推荐看 B 站 up [CodeSheep](https:&#x2F;&#x2F;space.bilibili.com&#x2F;384068749) 的视频 [手把手教你从0开始搭建自己的个人博客 |无坑版视频教程| hexo](https:&#x2F;&#x2F;www.bilibili.com&#x2F;video&#x2F;BV1Yb411a7ty) (14分48秒处)</span><br><span class="line"></span><br><span class="line">羊哥的视频讲的很详细，我就不赘述了（懒......）。</span><br><span class="line"></span><br><span class="line"># 上载到 gitee </span><br><span class="line"></span><br><span class="line">由于 github 服务器在国外，有时候访问贼慢，所以此处推荐在国内的 gitee(码云) 上部署。</span><br><span class="line"></span><br><span class="line">1、注册 gitee 账号（[码云官网](https:&#x2F;&#x2F;gitee.com&#x2F;)）</span><br><span class="line"></span><br><span class="line">2、新建仓库</span><br><span class="line"></span><br><span class="line">&lt;div style&#x3D;&quot;width:70%;margin:auto&quot;&gt;&#123;% asset_img giteenew.png 新建仓库 %&#125;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">   此处路径建议填写你的用户名，可以使用 &#96;&#96;&#96;https:&#x2F;&#x2F;用户名.gitee.io&#96;&#96;&#96; 进入博客网站。</span><br><span class="line">   </span><br><span class="line">&lt;div style&#x3D;&quot;width:70%;margin:auto&quot;&gt;&#123;% asset_img lujing.png 路径 %&#125;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">   仓库名称可以随便写一个，其他的什么仓库介绍、选择语言等通通跳过，点击最下面的创建。</span><br><span class="line"></span><br><span class="line">   以后要改相关信息的话，去 **管理** 里面改。</span><br><span class="line">   *注： 路径 别轻易改*</span><br><span class="line"> </span><br><span class="line">&lt;div style&#x3D;&quot;width:70%;margin:auto&quot;&gt;&#123;% asset_img guanli.png 管理 %&#125;&lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">3、修改配置文件 </span><br><span class="line"></span><br><span class="line">   找到配置文件 &#96;&#96;&#96;_config.yml&#96;&#96;&#96;，使用 Notepad++ 或者其他编辑器打开。</span><br><span class="line">   </span><br><span class="line"> &lt;div style&#x3D;&quot;width:70%;margin:auto&quot;&gt;&#123;% asset_img peizhi1.png 文件位置 %&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> </span><br><span class="line"> &lt;div style&#x3D;&quot;width:70%;margin:auto&quot;&gt;&#123;% asset_img peizhi2.png 配置文件 %&#125;&lt;&#x2F;div&gt;</span><br><span class="line"> </span><br><span class="line">   在配置文件中添加 </span><br><span class="line">   &#96;&#96;&#96;deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo:</span><br><span class="line">    github: https:&#x2F;&#x2F;github.com&#x2F;code-xh&#x2F;code-xh.github.io.git</span><br><span class="line">    gitee: https:&#x2F;&#x2F;gitee.com&#x2F;codexhk&#x2F;codexhk.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+ <div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/peizhi3.png" class="" title="配置文件"></div>
+
+<p>   *注：此处 gitee、github 后面的链接换成自己的。</p>
+<p>   gitee 仓库链接如下图</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/cangku.png" class="" title="仓库链接"></div>
+
+<p>4、在 git 终端中执行命令</p>
+<pre><code>```hexo c &amp; hexo g &amp; hexo d```
+
+成功推送到 gitee 后，在自己的 gitee 主页能看到如下的提示。</code></pre><div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/tuisong.png" class="" title="成功推送"></div>
+
+<p>5、进入自己的博客仓库。</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/boke.png" class="" title="仓库"></div>
+
+<p>   进入 gitee pages</p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/fuwu.png" class="" title="pages"></div>
+
+<p>6、启动/更新自己的 Gitee Pages 服务。</p>
+<div style="width:70%;margin:auto"></div>
+
+<p>   **注：每次上载自己的博客，除了 <code>hexo d</code> 外，还需要去这个页面更新服务才能成功上载到 gitee，这点和上载到 github 不同。也可以找方法自动完成这些步骤，需要大家自己百度了。</p>
+<p>7、在浏览器输入自己的网站地址，例如 <code>https://codexhk.gitee.io/</code>，看是否成功上载。</p>
  
       <!-- reward -->
       
@@ -196,16 +246,6 @@
   </div>
 
    
-  <nav class="article-nav">
-    
-    
-      <a href="/2020/07/04/hello-world/" class="article-nav-link">
-        <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">Hello World</div>
-      </a>
-    
-  </nav>
-
    
 <!-- valine评论 -->
 <div id="vcomments-box">
@@ -264,7 +304,7 @@
     <ul>
       <li>
         Copyrights &copy;
-        2015-2020
+        2020
         <i class="ri-heart-fill heart_icon"></i> 某某某的某某
       </li>
     </ul>
