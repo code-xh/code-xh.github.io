@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    归档: 2020/7 |  学习随笔
+    hexo搭建过程分享 |  学习随笔
   </title>
   <meta name="generator" content="hexo-theme-ayer">
   
@@ -43,71 +43,222 @@
       
     <main class="content on">
       <section class="outer">
-  <article class="articles">
+  <article
+  id="post-hexo搭建过程分享"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">2020/7</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" class="archive-article-date">
-  <time datetime="2020-07-05T05:04:02.000Z" itemprop="datePublished">07/05</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/"
-    >hexo搭建过程分享</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  hexo搭建过程分享
+</h1>
  
 
     </header>
-    
-    
+     
+    <div class="article-meta">
+      <a href="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" class="article-date">
+  <time datetime="2020-07-05T05:04:02.000Z" itemprop="datePublished">2020-07-05</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a>
   </div>
-</article>
-      
   
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/07/04/hello-world/" class="archive-article-date">
-  <time datetime="2020-07-04T13:04:24.617Z" itemprop="datePublished">07/04</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/07/04/hello-world/"
-    >Hello World</a> 
-</h2>
- 
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">291</span>
+        </span>
+    </span>
 
-    </header>
-    
-    
-  </div>
-</article>
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">1 分钟</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>本篇博客是 Windows10 平台下基于 hexo 搭建静态博客的攻略以及经验分享，有一些我自己踩过的坑及解决办法。</p>
+<p>在此特别感谢 B站up<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>所提供的参考帮助！</p>
+<p>仅以此篇开始我的个人博客之旅，同时也希望能够对初用 hexo 的大家有所帮助。</p>
+<h2 id="软件的安装与准备"><a href="#软件的安装与准备" class="headerlink" title="软件的安装与准备"></a>软件的安装与准备</h2><p>1、Git 的安装</p>
+<p>Git是用来管理代码的，在 Windows 下用 cmd 貌似也可以实现，但比较麻烦，所以推荐下载此软件。</p>
+<p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a></p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/gitdownload.png" class title="Git官网"></div>
+
+
+<p>缺省安装即可（即一路 next）。<br>安装成功后，随意在一个文件夹中右键，会出现 Git Bash Here</p>
+<div style="width:50%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/git%E6%88%90%E5%8A%9F.png" class title="git安装成功"></div>
+
+
+<p>2、Node.js 的安装</p>
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。使用 hexo 需要安装此环境。</p>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Nodejs官网</a></p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/nodejs%E4%B8%8B%E8%BD%BD.png" class title="nodejs下载"></div>
+
+
+<p>选择左边的 LTS 版本，该版本更稳定。缺省安装即可。</p>
+<h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><p>1、在随意一个位置新建一个文件夹，比如我在 E盘 中建立一个名为 Blog1 的文件夹。</p>
+<p>2、双击进入这个空白文件夹，在空白处右键鼠标，选择 <label style="color:red">Git Bash Here</label> </p>
+ 
+      <!-- reward -->
+      
+      <div id="reward-btn">
+        打赏
+      </div>
       
     </div>
-  </div>
-  
-  
+    
 
-  
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>版权声明： </strong>
+          本博客所有文章除特别声明外，著作权归作者所有。转载请注明出处！
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0/" rel="tag">学习</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2020/07/04/hello-world/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">Hello World</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "C4etPUxr1YAJENXngtvBvlgw-gzGzoHsz",
+    app_key: "fR7TJnzxjmpISaRJUqE7aDEP",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -248,6 +399,23 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">

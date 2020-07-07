@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/07/04/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>hexo搭建过程分享</title>
+    <url>/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/</url>
+    <content><![CDATA[<p>本篇博客是 Windows10 平台下基于 hexo 搭建静态博客的攻略以及经验分享，有一些我自己踩过的坑及解决办法。</p>
+<p>在此特别感谢 B站up<a href="https://space.bilibili.com/384068749" target="_blank" rel="noopener">CodeSheep</a>所提供的参考帮助！</p>
+<p>仅以此篇开始我的个人博客之旅，同时也希望能够对初用 hexo 的大家有所帮助。</p>
+<h2 id="软件的安装与准备"><a href="#软件的安装与准备" class="headerlink" title="软件的安装与准备"></a>软件的安装与准备</h2><p>1、Git 的安装</p>
+<p>Git是用来管理代码的，在 Windows 下用 cmd 貌似也可以实现，但比较麻烦，所以推荐下载此软件。</p>
+<p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git官网</a></p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/gitdownload.png" class title="Git官网"></div>
+
+
+<p>缺省安装即可（即一路 next）。<br>安装成功后，随意在一个文件夹中右键，会出现 Git Bash Here</p>
+<div style="width:50%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/git%E6%88%90%E5%8A%9F.png" class title="git安装成功"></div>
+
+
+<p>2、Node.js 的安装</p>
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。使用 hexo 需要安装此环境。</p>
+<p><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Nodejs官网</a></p>
+<div style="width:70%;margin:auto"><img src="/2020/07/05/hexo%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%E5%88%86%E4%BA%AB/nodejs%E4%B8%8B%E8%BD%BD.png" class title="nodejs下载"></div>
+
+
+<p>选择左边的 LTS 版本，该版本更稳定。缺省安装即可。</p>
+<h2 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h2><p>1、在随意一个位置新建一个文件夹，比如我在 E盘 中建立一个名为 Blog1 的文件夹。</p>
+<p>2、双击进入这个空白文件夹，在空白处右键鼠标，选择 <label style="color:red">Git Bash Here</label> </p>
+]]></content>
+      <categories>
+        <category>博客搭建</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+</search>
